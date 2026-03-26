@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garuda Vastra Silks — Authentic Indian Silk & Textiles</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --maroon: #7B1C2E;
+            --gold: #C49A3C;
+            --gold-light: #E8C97A;
+            --cream: #FAF6F0;
+            --ivory: #FFF9F2;
+            --deep: #1C0A0E;
+            --text: #3D1F28;
+            --muted: #8A6870;
+            --border: rgba(196, 154, 60, 0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* PROMO BAR */
+        .promo-bar {
+            background: var(--maroon);
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 13px;
+            letter-spacing: 0.06em;
+        }
+
+        .promo-bar span {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 60px;
+            background: rgba(250, 246, 240, 0.96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            text-align: center;
+        }
+
+        .nav-logo-main {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--maroon);
+            letter-spacing: 0.04em;
+            line-height: 1;
+        }
+
+        .nav-logo-sub {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--maroon);
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .nav-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .nav-icon:hover {
+            background: var(--maroon);
+            border-color: var(--maroon);
+        }
+
+        .nav-cta {
+            background: var(--maroon);
+            color: #fff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #5E1522;
+        }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: calc(100vh - 110px);
+            overflow: hidden;
+        }
+
+        .hero-left {
+            background: var(--deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 60px;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.06;
+            background-image: repeating-linear-gradient(45deg, #C49A3C 0, #C49A3C 1px, transparent 0, transparent 50%);
+            background-size: 20px 20px;
+        }
+
+        .hero-silk-display {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .silk-frame {
+            width: 280px;
+            height: 380px;
+            border: 2px solid rgba(196, 154, 60, 0.4);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4A0E1C 0%, #2D0812 50%, #5C1020 100%);
+        }
+
+        .silk-emoji {
+            font-size: 100px;
+        }
+
+        .silk-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(196, 154, 60, 0.15);
+            border-top: 1px solid rgba(196, 154, 60, 0.3);
+            padding: 12px 16px;
+            text-align: center;
+        }
+
+        .silk-tag-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .silk-tag-price {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 2px;
+        }
+
+        .silk-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .silk-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .silk-dot:hover {
+            transform: scale(1.3);
+        }
+
+        .silk-dot.active {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        .hero-badge-left {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 2;
+            background: var(--gold);
+            color: var(--deep);
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 70px 80px 60px;
+            background: var(--ivory);
+        }
+
+        .hero-kicker {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-kicker::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(40px, 4vw, 60px);
+            line-height: 1.1;
+            color: var(--deep);
+            margin-bottom: 24px;
+        }
+
+        .hero-title em {
+            color: var(--maroon);
+            font-style: italic;
+        }
+
+        .hero-desc {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 400px;
+            margin-bottom: 40px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 56px;
+        }
+
+        .btn-primary {
+            background: var(--maroon);
+            color: #fff;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #5E1522;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--maroon);
+            padding: 13px 28px;
+            border: 1.5px solid var(--maroon);
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background: var(--maroon);
+            color: #fff;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .h-stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--maroon);
+        }
+
+        .h-stat-lbl {
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        /* CATEGORIES */
+        .categories {
+            padding: 80px 60px;
+            background: var(--cream);
+        }
+
+        .sec-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .sec-tag {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .sec-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(28px, 3vw, 42px);
+            color: var(--deep);
+        }
+
+        .sec-title em {
+            color: var(--maroon);
+            font-style: italic;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .cat-card {
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            aspect-ratio: 3/4;
+            transition: transform 0.3s;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .cat-card:hover .cat-overlay {
+            opacity: 1;
+        }
+
+        .cat-bg {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+
+        .cat-card:nth-child(1) .cat-bg {
+            background: linear-gradient(160deg, #4A0E1C, #7B1C2E);
+        }
+
+        .cat-card:nth-child(2) .cat-bg {
+            background: linear-gradient(160deg, #1A3A5C, #2D5A8C);
+        }
+
+        .cat-card:nth-child(3) .cat-bg {
+            background: linear-gradient(160deg, #1A3A1A, #2D6B2D);
+        }
+
+        .cat-card:nth-child(4) .cat-bg {
+            background: linear-gradient(160deg, #3A1A3A, #6B2D6B);
+        }
+
+        .cat-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(123, 28, 46, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .cat-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(28, 10, 14, 0.9));
+            padding: 40px 20px 20px;
+        }
+
+        .cat-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: #fff;
+            font-style: italic;
+        }
+
+        .cat-count {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.06em;
+            margin-top: 3px;
+        }
+
+        /* FEATURED */
+        .featured {
+            padding: 80px 60px;
+            background: var(--ivory);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 16px 40px rgba(123, 28, 46, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .product-img {
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, #3D0F1A, #5C1828);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            position: relative;
+        }
+
+        .product-img:nth-child(1) {
+            background: linear-gradient(135deg, #3D0F1A, #5C1828);
+        }
+
+        .p-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .p-badge.new {
+            background: var(--gold);
+            color: var(--deep);
+        }
+
+        .p-badge.sale {
+            background: var(--maroon);
+            color: #fff;
+        }
+
+        .p-badge.popular {
+            background: var(--deep);
+            color: var(--gold-light);
+        }
+
+        .p-wishlist {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .p-wishlist:hover {
+            background: var(--maroon);
+        }
+
+        .product-body {
+            padding: 18px;
+        }
+
+        .p-category {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .p-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--deep);
+            margin-bottom: 6px;
+        }
+
+        .p-desc {
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .p-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .p-price {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--maroon);
+        }
+
+        .p-old {
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: line-through;
+            margin-left: 6px;
+        }
+
+        .p-add {
+            background: var(--maroon);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            transition: background 0.2s;
+        }
+
+        .p-add:hover {
+            background: #5E1522;
+        }
+
+        /* BANNER */
+        .banner {
+            margin: 0 60px 80px;
+            background: var(--maroon);
+            border-radius: 12px;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: repeating-linear-gradient(45deg, #E8C97A 0, #E8C97A 1px, transparent 0, transparent 50%);
+            background-size: 16px 16px;
+        }
+
+        .banner-left {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-tag {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 14px;
+        }
+
+        .banner-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(28px, 3vw, 44px);
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .banner-title em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .banner-desc {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            max-width: 380px;
+        }
+
+        .banner-right {
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+
+        .banner-offer {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 30px 40px;
+        }
+
+        .offer-pct {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 64px;
+            font-weight: 600;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+
+        .offer-off {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .offer-btn {
+            background: #fff;
+            color: var(--maroon);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .offer-btn:hover {
+            background: var(--gold-light);
+        }
+
+        /* WHY US */
+        .why {
+            padding: 80px 60px;
+            background: var(--cream);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--ivory);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(123, 28, 46, 0.08);
+        }
+
+        .why-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .why-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--deep);
+            margin-bottom: 8px;
+        }
+
+        .why-desc {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 80px 60px;
+            background: var(--deep);
+        }
+
+        .testimonials .sec-title {
+            color: #fff;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .test-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(196, 154, 60, 0.2);
+            border-radius: 8px;
+            padding: 28px;
+        }
+
+        .test-stars {
+            color: var(--gold);
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .test-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .test-text::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 40px;
+            color: var(--gold);
+            line-height: 0;
+            vertical-align: -14px;
+            margin-right: 4px;
+        }
+
+        .test-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .test-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--maroon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .test-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .test-loc {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 2px;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 80px 60px;
+            background: var(--ivory);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 40px;
+        }
+
+        .cf-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            color: var(--deep);
+            margin-bottom: 28px;
+        }
+
+        .cf-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .cf-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .cf-group label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .cf-group input,
+        .cf-group select,
+        .cf-group textarea {
+            padding: 11px 14px;
+            border-radius: 4px;
+            border: 1px solid rgba(61, 31, 40, 0.15);
+            background: var(--cream);
+            font-size: 13px;
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .cf-group input:focus,
+        .cf-group select:focus,
+        .cf-group textarea:focus {
+            border-color: var(--maroon);
+        }
+
+        .cf-group textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .cf-submit {
+            width: 100%;
+            padding: 14px;
+            border-radius: 4px;
+            background: var(--maroon);
+            color: #fff;
+            border: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .cf-submit:hover {
+            background: #5E1522;
+        }
+
+        .contact-info {
+            padding-top: 10px;
+        }
+
+        .ci-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            color: var(--deep);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .ci-title em {
+            color: var(--maroon);
+            font-style: italic;
+        }
+
+        .ci-desc {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 36px;
+        }
+
+        .ci-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .ci-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 4px;
+            background: rgba(123, 28, 46, 0.08);
+            border: 1px solid rgba(123, 28, 46, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .ci-label {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+
+        .ci-val {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--deep);
+        }
+
+        .ci-sub {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--deep);
+            padding: 60px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {}
+
+        .footer-logo-main {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .footer-logo-sub {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .footer-desc {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.8;
+            max-width: 260px;
+        }
+
+        .footer-col-title {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.35);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* PROTOTYPE BANNER */
+        .proto-top {
+            background: #1C0A0E;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 13px;
+        }
+
+        .proto-top strong {
+            color: var(--gold-light);
+        }
+
+        .proto-top a {
+            color: var(--gold-light);
+            font-weight: 500;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        .hero-right>* {
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .hero-right>*:nth-child(1) {
+            animation-delay: .1s
+        }
+
+        .hero-right>*:nth-child(2) {
+            animation-delay: .2s
+        }
+
+        .hero-right>*:nth-child(3) {
+            animation-delay: .3s
+        }
+
+        .hero-right>*:nth-child(4) {
+            animation-delay: .4s
+        }
+
+        .hero-right>*:nth-child(5) {
+            animation-delay: .5s
+        }
+
+        .silk-frame {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        /* RESPONSIVE STYLES */
+        @media (max-width: 1024px) {
+            nav {
+                padding: 18px 40px;
+            }
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero-right {
+                padding: 60px 40px;
+            }
+
+            .cat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px;
+            }
+
+            .banner-desc {
+                margin: 0 auto;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .test-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-top {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .promo-bar {
+                font-size: 11px;
+                padding: 8px 10px;
+            }
+
+            nav {
+                padding: 14px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-logo-main {
+                font-size: 20px;
+            }
+
+            .nav-cta {
+                padding: 8px 16px;
+                font-size: 11px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-left {
+                padding: 40px 20px;
+            }
+
+            .hero-right {
+                padding: 60px 20px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-desc {
+                margin: 0 auto 30px;
+            }
+
+            .hero-btns {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-stats {
+                padding-top: 30px;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .categories {
+                padding: 60px 20px;
+            }
+
+            .featured {
+                padding: 60px 20px;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .banner {
+                margin: 0 20px 60px;
+                padding: 30px 20px;
+            }
+
+            .offer-pct {
+                font-size: 48px;
+            }
+
+            .why {
+                padding: 60px 20px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .testimonials {
+                padding: 60px 20px;
+            }
+
+            .test-grid {
+                grid-template-columns: 1fr;
+                margin-top: 30px;
+            }
+
+            .contact {
+                padding: 60px 20px;
+            }
+
+            .contact-form {
+                padding: 24px;
+            }
+
+            .cf-row {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                padding: 60px 20px 30px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .silk-frame {
+                width: 100%;
+                max-width: 280px;
+                height: 320px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .h-stat-num {
+                font-size: 24px;
+            }
+
+            .cat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ci-title {
+                font-size: 28px;
+            }
+
+            .p-name {
+                font-size: 16px;
+            }
+
+            .sec-title {
+                font-size: 28px;
+            }
+
+            .nav-right {
+                gap: 8px;
+            }
+
+            .nav-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="proto-top">
+        <span class="material-symbols-outlined"
+            style="vertical-align: middle; font-size: 16px; margin-right: 4px;">palette</span> <strong>Free
+            prototype</strong> built for Garuda Vastra Silks — want this live on the internet? <a
+            onclick="alert('Contact the developer to get your website live in 3 days!')">Contact us 8088500769
+            (Krishna)</a>
+    </div>
+
+    <div class="promo-bar">
+        Free shipping on orders above ₹2,000 &nbsp;|&nbsp; <span>Festive Season Sale: Up to 30% off</span> &nbsp;|&nbsp;
+        Exclusive handloom collection now available
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#featured">Sarees</a></li>
+            <li><a href="#featured">Dress Material</a></li>
+        </ul>
+        <div class="nav-logo">
+            <div class="nav-logo-main">Garuda Vastra Silks</div>
+            <div class="nav-logo-sub">Est. since 1982 - Yadgir</div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-icon"><span class="material-symbols-outlined">search</span></div>
+            <div class="nav-icon"><span class="material-symbols-outlined">shopping_bag</span></div>
+            <button class="nav-cta">Visit Store</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-pattern"></div>
+            <div class="hero-badge-left">New Arrivals 2026</div>
+            <div class="hero-silk-display">
+                <div class="silk-frame">
+                    <img src="https://www.kollybollyethnics.com/image/catalog/data/13Jul2022/Stunning-Royal-Blue-Woven-Kanjivaram-Silk-Saree-With-10015-2.jpg"
+                        id="heroImage" alt="Silk Saree"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;" />
+                    <div class="silk-tag">
+                        <div class="silk-tag-name" id="heroName">Kanjivaram Silk Saree</div>
+                        <div class="silk-tag-price" id="heroPrice">Starting ₹4,500</div>
+                    </div>
+                </div>
+                <div class="silk-dots">
+                    <div class="silk-dot active" style="background:#7B1C2E;" onclick="changeHero(0)"></div>
+                    <div class="silk-dot" style="background:#C49A3C;" onclick="changeHero(1)"></div>
+                    <div class="silk-dot" style="background:#1A3A5C;" onclick="changeHero(2)"></div>
+                    <div class="silk-dot" style="background:#2D6B2D;" onclick="changeHero(3)"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-kicker">Garuda Vastra Silks — Yadgir, karnataka</div>
+            <h1 class="hero-title">Where <em>Silk</em><br>Meets Tradition</h1>
+            <p class="hero-desc">Discover our curated collection of authentic Indian silks, handloom sarees, and premium
+                dress materials — sourced directly from master weavers across India.</p>
+            <div class="hero-btns">
+                <a href="#featured" class="btn-primary">Shop Collection</a>
+                <a href="#contact" class="btn-outline">Visit Our Store</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="h-stat-num">500+</div>
+                    <div class="h-stat-lbl">Silk varieties</div>
+                </div>
+                <div>
+                    <div class="h-stat-num">20+</div>
+                    <div class="h-stat-lbl">Years of trust</div>
+                </div>
+                <div>
+                    <div class="h-stat-num">10K+</div>
+                    <div class="h-stat-lbl">Happy customers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="collections">
+        <div class="sec-header">
+            <div class="sec-tag">Browse by Category</div>
+            <h2 class="sec-title">Our <em>Collections</em></h2>
+        </div>
+        <div class="cat-grid">
+            <div class="cat-card">
+                <img class="cat-bg" src="https://i.pinimg.com/originals/46/a1/23/46a123828c1981f194ffda46c082203f.jpg"
+                    style="object-fit: cover; width: 100%; height: 100%; opacity: 0.8;" />
+                <div class="cat-overlay"></div>
+                <div class="cat-info">
+                    <div class="cat-name">Silk Sarees</div>
+                    <div class="cat-count">120+ varieties</div>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img class="cat-bg"
+                    src="https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=600&q=80"
+                    style="object-fit: cover; width: 100%; height: 100%; opacity: 0.8;" />
+                <div class="cat-overlay"></div>
+                <div class="cat-info">
+                    <div class="cat-name">Dress Materials</div>
+                    <div class="cat-count">80+ varieties</div>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img class="cat-bg"
+                    src="https://www.dupattabazaar.com/cdn/shop/files/websitesize-135_5f256d4b-4e93-400e-8bfd-c5c66fe14fcd_1024x1024.jpg?v=1774175772"
+                    style="object-fit: cover; width: 100%; height: 100%; opacity: 0.8;" />
+                <div class="cat-overlay"></div>
+                <div class="cat-info">
+                    <div class="cat-name">Dupattas & Stoles</div>
+                    <div class="cat-count">60+ varieties</div>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img class="cat-bg" src="https://meherbastralaya.com/wp-content/uploads/2022/11/wp-1668859980070.jpg"
+                    style="object-fit: cover; width: 100%; height: 100%; opacity: 0.8;" />
+                <div class="cat-overlay"></div>
+                <div class="cat-info">
+                    <div class="cat-name">Handloom Fabric</div>
+                    <div class="cat-count">40+ varieties</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured" id="featured">
+        <div class="sec-header">
+            <div class="sec-tag">Bestsellers</div>
+            <h2 class="sec-title">Featured <em>Products</em></h2>
+        </div>
+        <div class="featured-grid">
+            <div class="product-card">
+                <div class="product-img" style="background:linear-gradient(135deg,#4A0E1C,#7B2030);">
+                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80"
+                        style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" /><span
+                        class="p-badge popular" style="z-index: 1;">Bestseller</span>
+                    <div class="p-wishlist"><span class="material-symbols-outlined"
+                            style="font-size: 16px;">favorite_border</span></div>
+                </div>
+                <div class="product-body">
+                    <div class="p-category">Kanjivaram · Pure Silk</div>
+                    <div class="p-name">Traditional Bridal Saree</div>
+                    <div class="p-desc">Rich zari work with intricate temple border. Perfect for weddings and
+                        celebrations.</div>
+                    <div class="p-footer">
+                        <div><span class="p-price">₹8,500</span><span class="p-old">₹11,000</span></div>
+                        <button class="p-add">Enquire</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img" style="background:linear-gradient(135deg,#1A3A5C,#2D5A8C);">
+                    <img src="https://media.urbanwomania.com/wp-content/uploads/2023/07/Royal-Red-Banarasi-Saree.webp"
+                        style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" /><span
+                        class="p-badge new" style="z-index: 1;">New</span>
+                    <div class="p-wishlist"><span class="material-symbols-outlined"
+                            style="font-size: 16px;">favorite_border</span></div>
+                </div>
+                <div class="product-body">
+                    <div class="p-category">Banarasi · Silk</div>
+                    <div class="p-name">Royal Blue Banarasi</div>
+                    <div class="p-desc">Handwoven Banarasi silk with golden butis and a rich pallu. A timeless classic.
+                    </div>
+                    <div class="p-footer">
+                        <div><span class="p-price">₹6,200</span></div>
+                        <button class="p-add">Enquire</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img" style="background:linear-gradient(135deg,#1A3A1A,#2D6B2D);">
+                    <img src="http://houseofelegance.in/cdn/shop/products/ikat-silk-saree1.webp?v=1674304052"
+                        style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" /><span
+                        class="p-badge sale" style="z-index: 1;">Sale</span>
+                    <div class="p-wishlist"><span class="material-symbols-outlined"
+                            style="font-size: 16px;">favorite_border</span></div>
+                </div>
+                <div class="product-body">
+                    <div class="p-category">Pochampally · Ikat</div>
+                    <div class="p-name">Pochampally Ikat Saree</div>
+                    <div class="p-desc">Geometric ikat weave from Telangana's own Pochampally village. Lightweight and
+                        elegant.</div>
+                    <div class="p-footer">
+                        <div><span class="p-price">₹3,800</span><span class="p-old">₹5,200</span></div>
+                        <button class="p-add">Enquire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <div class="banner-pattern"></div>
+        <div class="banner-left">
+            <div class="banner-tag">Limited Time Offer</div>
+            <h2 class="banner-title">Festive Season<br><em>Grand Sale</em></h2>
+            <p class="banner-desc">Shop our exclusive festive collection and enjoy special discounts on premium silk
+                sarees, dress materials, and handloom fabrics. In-store and delivery available.</p>
+        </div>
+        <div class="banner-right">
+            <div class="banner-offer">
+                <div class="offer-pct">30%</div>
+                <div class="offer-off">Off on select items</div>
+                <button class="offer-btn">Shop the Sale</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="why" id="why">
+        <div class="sec-header">
+            <div class="sec-tag">Why Choose Us</div>
+            <h2 class="sec-title">The <em>Garuda</em> Difference</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"><span class="material-symbols-outlined"
+                        style="font-size: inherit;">workspace_premium</span></div>
+                <div class="why-title">Authentic Weaves</div>
+                <div class="why-desc">Every piece sourced directly from certified weavers and government-registered
+                    handloom clusters.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><span class="material-symbols-outlined" style="font-size: inherit;">diamond</span>
+                </div>
+                <div class="why-title">Pure Silk Guarantee</div>
+                <div class="why-desc">All silk sarees come with a purity certificate. What you see is exactly what you
+                    get.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><span class="material-symbols-outlined"
+                        style="font-size: inherit;">local_shipping</span></div>
+                <div class="why-title">Doorstep Delivery</div>
+                <div class="why-desc">Fast delivery across Hyderabad. Pan-India shipping available on all orders above
+                    ₹2,000.</div>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><span class="material-symbols-outlined"
+                        style="font-size: inherit;">published_with_changes</span></div>
+                <div class="why-title">Easy Returns</div>
+                <div class="why-desc">Not satisfied? Return within 7 days for a full exchange or store credit. No
+                    questions asked.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="sec-header">
+            <div class="sec-tag" style="color:var(--gold);">Customer Stories</div>
+            <h2 class="sec-title">What Our <em style="color:var(--gold-light)">Customers</em> Say</h2>
+        </div>
+        <div class="test-grid">
+            <div class="test-card">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-text">Bought a Kanjivaram saree for my daughter's wedding. The quality is exceptional
+                    and the zari work is stunning. Will definitely come back!</div>
+                <div class="test-author">
+                    <img class="test-avatar"
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80"
+                        style="object-fit:cover;" />
+                    <div>
+                        <div class="test-name">Lakshmi Reddy</div>
+                        <div class="test-loc">Banjara Hills, Hyderabad</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-text">The Pochampally sarees are authentic and reasonably priced. Great selection and
+                    the staff helped me pick the perfect one. Highly recommended!</div>
+                <div class="test-author">
+                    <img class="test-avatar"
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+                        style="object-fit:cover;" />
+                    <div>
+                        <div class="test-name">Priya Sharma</div>
+                        <div class="test-loc">Secunderabad</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-text">Ordered online and received within 2 days. The packaging was beautiful and the
+                    saree was exactly as shown. Best silk store in Hyderabad!</div>
+                <div class="test-author">
+                    <img class="test-avatar"
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                        style="object-fit:cover;" />
+                    <div>
+                        <div class="test-name">Anitha Rao</div>
+                        <div class="test-loc">Kukatpally, Hyderabad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="ci-title">Visit Us or<br><em>Get in Touch</em></h2>
+                <p class="ci-desc">Come experience our collection in person or send us a message for custom orders, bulk
+                    enquiries, or any questions about our products.</p>
+                <div class="ci-item">
+                    <div class="ci-icon"><span class="material-symbols-outlined"
+                            style="font-size: inherit;">location_on</span></div>
+                    <div>
+                        <div class="ci-label">Store Address</div>
+                        <div class="ci-val">Garuda Vastra Silks, Yadgir</div>
+                        <div class="ci-sub">Karnataka, India</div>
+                    </div>
+                </div>
+                <div class="ci-item">
+                    <div class="ci-icon"><span class="material-symbols-outlined"
+                            style="font-size: inherit;">schedule</span></div>
+                    <div>
+                        <div class="ci-label">Store Hours</div>
+                        <div class="ci-val">Mon – Sat: 10:00 AM – 8:00 PM</div>
+                        <div class="ci-sub">Sunday: 11:00 AM – 6:00 PM</div>
+                    </div>
+                </div>
+                <div class="ci-item">
+                    <div class="ci-icon"><span class="material-symbols-outlined" style="font-size: inherit;">call</span>
+                    </div>
+                    <div>
+                        <div class="ci-label">WhatsApp / Call</div>
+                        <div class="ci-val">Available on request</div>
+                        <div class="ci-sub">Quick response within 1 hour</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="cf-title">Send an Enquiry</div>
+                <div class="cf-row">
+                    <div class="cf-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Full name">
+                    </div>
+                    <div class="cf-group">
+                        <label>Phone / WhatsApp</label>
+                        <input type="tel" placeholder="+91 00000 00000">
+                    </div>
+                </div>
+                <div class="cf-group">
+                    <label>What are you looking for?</label>
+                    <select>
+                        <option>Silk Sarees</option>
+                        <option>Dress Materials</option>
+                        <option>Dupattas & Stoles</option>
+                        <option>Bulk / Wholesale Order</option>
+                        <option>Custom Order</option>
+                    </select>
+                </div>
+                <div class="cf-group">
+                    <label>Budget Range</label>
+                    <select>
+                        <option>Under ₹2,000</option>
+                        <option>₹2,000 – ₹5,000</option>
+                        <option selected>₹5,000 – ₹10,000</option>
+                        <option>₹10,000 – ₹25,000</option>
+                        <option>Above ₹25,000</option>
+                    </select>
+                </div>
+                <div class="cf-group">
+                    <label>Message</label>
+                    <textarea
+                        placeholder="Tell us more about what you need — occasion, colour preference, quantity..."></textarea>
+                </div>
+                <button class="cf-submit"
+                    onclick="this.textContent='Enquiry Sent! We will contact you soon ✓'; this.style.background='#2D6B2D';">Send
+                    Enquiry</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo-main">Garuda Vastra Silks</div>
+                <div class="footer-logo-sub">Authentic Indian Textiles</div>
+                <p class="footer-desc">Bringing you the finest handloom silks and textiles from across India. Trusted by
+                    thousands of families in Yadgir for generations.</p>
+            </div>
+            <div>
+                <div class="footer-col-title">Collections</div>
+                <ul class="footer-links">
+                    <li><a href="#">Silk Sarees</a></li>
+                    <li><a href="#">Banarasi</a></li>
+                    <li><a href="#">Kanjivaram</a></li>
+                    <li><a href="#">Pochampally</a></li>
+                    <li><a href="#">Dress Materials</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Information</div>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Store Location</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Follow Us</div>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 Garuda Vastra Silks. All rights reserved.</div>
+            <div>Made with care in Yadgir 🇮🇳</div>
+        </div>
+    </footer>
+
+    <script>
+        const heroItems = [
+            { image: 'https://images.unsplash.com/photo-1583391733958-6dc511b84931?auto=format&fit=crop&w=600&q=80', name: 'Kanjivaram Silk Saree', price: 'Starting ₹4,500' },
+            { image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80', name: 'Banarasi Silk Saree', price: 'Starting ₹3,800' },
+            { image: 'https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=600&q=80', name: 'Premium Dress Material', price: 'Starting ₹1,200' },
+            { image: 'https://yourstore.io/api/uploads/5d30013a5c83a702392c4c8b/products/1669273806152-59960.jpg', name: 'Handwoven Dupatta', price: 'Starting ₹800' },
+        ];
+        function changeHero(i) {
+            document.querySelectorAll('.silk-dot').forEach((d, j) => d.classList.toggle('active', i === j));
+            document.getElementById('heroImage').src = heroItems[i].image;
+            document.getElementById('heroName').textContent = heroItems[i].name;
+            document.getElementById('heroPrice').textContent = heroItems[i].price;
+        }
+        document.querySelectorAll('.p-wishlist').forEach(w => {
+            w.addEventListener('click', () => {
+                const icon = w.querySelector('span');
+                if (icon) {
+                    icon.textContent = icon.textContent === 'favorite_border' ? 'favorite' : 'favorite_border';
+                    icon.style.color = icon.textContent === 'favorite' ? '#7B1C2E' : 'inherit';
+                }
+            });
+        });
+        document.querySelectorAll('.p-add').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.textContent = 'Sent ✓';
+                btn.style.background = '#2D7A3A';
+                setTimeout(() => { btn.textContent = 'Enquire'; btn.style.background = ''; }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
